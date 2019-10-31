@@ -36,17 +36,22 @@
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.4.5"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.0.2",
-    "emotion": "^10.0.9",
-    "ramda": "^0.26.1",
+    "typescript": "^3.4.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "@material-ui/core": "^4.0.2"
+  },
+  "dependencies": {
+    "emotion": "^10.0.9",
+    "ramda": "^0.26.1",
     "react-live": "^2.1.2",
     "storybook": "^1.0.0",
     "storybook-readme": "^5.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@material-ui/core": "^4.0.2"
   },
   "config": {
     "commitizen": {
