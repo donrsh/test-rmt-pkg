@@ -1,16 +1,20 @@
 {
-  "name": "react-ts-lib-template",
-  "version": "0.0.1",
+  "name": "@donrsh/test-rmt-pkg",
+  "version": "0.0.3",
   "description": "A template to start build react component lib in typescript",
-  "main": "index.js",
+  "main": "lib-build/index.js",
+  "files": [
+    "lib-build"
+  ],
   "scripts": {
     "test": "jest --env=jsdom --watch",
     "test:lib": "jest --env=jsdom",
     "start:sb": "start-storybook -p 6006",
     "build:sb": "build-storybook -o storybook-build",
-    "build:lib": "tsc"
+    "build:lib": "tsc",
+    "publish": "npm publish --access public"
   },
-  "author": "",
+  "author": "don.hsieh",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.4",
