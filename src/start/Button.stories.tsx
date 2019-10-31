@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button from './Button';
 
 storiesOf('Button', module)
-  .add('with text', () => <Button disabled>Hello Button</Button>)
+  .add('disabled', () => <Button disabled>Hello Button</Button>)
   .add('alert', () => (
     <Button onClick={() => alert('Button clicked!')}>Alert</Button>
   ));
