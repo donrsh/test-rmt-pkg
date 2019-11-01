@@ -3,6 +3,7 @@
 # builds
 /storybook-build
 /lib-build
+/build-lib-babel
 
 # others
 .storybook/webpack.config.debug.json

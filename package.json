@@ -1,10 +1,10 @@
 {
   "name": "@donrsh/test-rmt-pkg",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A template to start build react component lib in typescript",
-  "main": "lib-build/index.js",
+  "main": "build-lib-babel/index.js",
   "files": [
-    "lib-build"
+    "build-lib-babel"
   ],
   "scripts": {
     "test": "jest --env=jsdom --watch",
@@ -12,12 +12,17 @@
     "start:sb": "start-storybook -p 6006",
     "build:sb": "build-storybook -o storybook-build",
     "build:lib": "tsc",
+    "build:lib:babel": "babel src-babel --out-dir build-lib-babel --copy-files",
     "publish": "npm publish --access public"
   },
   "author": "don.hsieh",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@material-ui/core": "^4.0.2",
     "@mdx-js/loader": "^1.0.19",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-info": "^5.0.11",
@@ -34,16 +39,15 @@
     "prettier": "^1.17.0",
     "prism-react-renderer": "^0.1.6",
     "raw-loader": "^2.0.0",
+    "react": "^16.8.6",
     "react-docgen-typescript-loader": "^3.1.0",
+    "react-dom": "^16.8.6",
     "react-testing-library": "^7.0.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.4.5",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "@material-ui/core": "^4.0.2"
+    "typescript": "^3.4.5"
   },
   "dependencies": {
     "emotion": "^10.0.9",
@@ -53,9 +57,9 @@
     "storybook-readme": "^5.0.3"
   },
   "peerDependencies": {
+    "@material-ui/core": "^4.0.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "@material-ui/core": "^4.0.2"
+    "react-dom": "^16.8.6"
   },
   "config": {
     "commitizen": {

@@ -29,9 +29,11 @@ import {
 } from './MDXComponents';
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src', true, /\.stories\.tsx$/);
+const reqTsSrc = require.context('../src', true, /\.stories\.tsx$/);
+const reqBabelSrc = require.context('../src-babel', true, /\.stories\.js$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  reqTsSrc.keys().forEach(filename => reqTsSrc(filename));
+  reqBabelSrc.keys().forEach(filename => reqBabelSrc(filename));
 }
 
 const MDXWrapper = storyFn => (
